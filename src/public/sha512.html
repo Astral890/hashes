@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SHA-512 - Probar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="sha512.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>SHA-512</h1>
+
+    <div class="card">
+      <label>Contenido</label>
+      <textarea id="inputText" placeholder="Contenido..."></textarea>
+
+      <div class="row" style="margin-top:8px">
+        <button id="btnHash" class="btn">Calcular SHA-512</button>
+        <a class="btn ghost" href="index.html">Volver</a>
+      </div>
+
+      <label>Hash</label>
+      <div id="output" class="result">—</div>
+    </div>
+  </div>
+</body>
+</html>

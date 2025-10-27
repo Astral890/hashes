@@ -1,8 +1,6 @@
 import express from 'express';
 import crypto from 'crypto';
 import bcrypt from 'bcrypt';
-import pkg from 'unix-crypt-td-js'; // npm install unix-crypt-td-js
-const { sha256crypt } = pkg;
 
 export const router = express.Router();
 
@@ -48,17 +46,17 @@ res.json({ hash });
 });
 
 
-router.post('/sha256crypt', (req, res)=>{
-const { text } = req.body;
-// sha256crypt requiere un salt; unix-crypt-td-js ofrece sha256_crypt
-const salt = crypto.randomBytes(8).toString('base64').slice(0,16);
-const hash = sha256crypt(text, salt);
-res.json({ salt, hash });
+router.post('/sha256crypt', (req, res) => {
+  const { text } = req.body;
+  const salt = crypto.randomBytes(8).toString('hex');
+  const hash = crypto.createHash('sha256').update(salt + text).digest('hex');
+  res.json({ salt, hash });
 });
 
 
+
 router.post('/pbkdf2', (req, res)=>{
-const { text, iterations } = req.body;
+const { text, iterations } = req.body; 
 const it = iterations || 100000;
 const result = pbkdf2Hash(text, null, it);
 res.json(result);
@@ -69,7 +67,12 @@ res.json(result);
 router.post('/verify/bcrypt', async (req,res)=>{
 const { text, hash } = req.body;
 const ok = await bcrypt.compare(text, hash);
-res.json({ verified: !!ok });
+console.log(ok)
+ if(!ok){
+    return res.status(400).send({status:"Error", message:"Hubo un errror pa"})
+}else{
+    return res.status(200).send({status:"Good", message:"Bien"})
+}
 });
 
 

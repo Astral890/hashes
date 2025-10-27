@@ -1,0 +1,38 @@
+/* styles.css */
+:root{
+  --bg: #ffffff;
+  --card: #fbfdff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-2: #34d399;
+  --border: #e6eef8;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:Inter, "Segoe UI", Roboto, Arial; background:var(--bg); color:#0f1724}
+.container{
+  max-width:760px;
+  margin:28px auto;
+  padding:22px;
+  background:linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+h1{margin:0 0 8px; font-size:22px}
+p.lead{margin:0 0 18px; color:var(--muted)}
+.row{display:flex; gap:10px; flex-wrap:wrap}
+.btn{display:inline-block; padding:10px 14px; background:var(--accent); color:white; text-decoration:none; border-radius:8px; border:none; cursor:pointer; font-weight:600}
+.btn.ghost{background:transparent; color:var(--accent); border:1px solid var(--border)}
+.card{background:var(--card); padding:14px; border-radius:10px; border:1px solid var(--border); margin-top:14px}
+label{display:block; font-size:14px; margin:8px 0 6px}
+input[type=text], input[type=url], textarea, select {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--border);
+  background:#fff; font-size:14px; color:inherit;
+}
+textarea{min-height:96px; resize:vertical}
+.small{max-width:420px}
+.kv{font-size:13px; color:var(--muted)}
+.result{background:#f3f9ff; padding:10px; border-radius:8px; border:1px solid #e6f0ff; word-break:break-word; white-space:pre-wrap}
+.footer{margin-top:16px; font-size:13px; color:var(--muted); text-align:center}
+a.link{color:var(--accent); text-decoration:none}

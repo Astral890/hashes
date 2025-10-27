@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PBKDF2 - Probar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="pbkdf2.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>PBKDF2</h1>
+
+    <div class="card">
+      <label>Contraseña</label>
+      <input id="password" type="text" placeholder="Escribe contraseña" />
+
+      <label>Iteraciones</label>
+      <input id="iterations" type="number" value="100000" min="1000" />
+
+      <div class="row" style="margin-top:8px">
+        <button id="btnDerive" class="btn">Derivar</button>
+        <a class="btn ghost" href="index.html">Volver</a>
+      </div>
+
+      <label>Respuesta</label>
+      <div id="output" class="result">—</div>
+
+    </div>
+  </div>
+</body>
+</html>

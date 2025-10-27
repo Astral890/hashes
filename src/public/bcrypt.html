@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>BCRYPT - Probar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="bcrypt_client.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>BCRYPT</h1>
+
+    <div class="card">
+      <label>Contraseña</label>
+      <input id="password" type="text" placeholder="Escribe la contraseña" />
+
+      <div class="row" style="margin-top:8px">
+        <button id="btnHash" class="btn">Generar hash</button>
+        <a class="btn ghost" href="index.html">Volver</a>
+      </div>
+
+      <label>Hash generado</label>
+      <div id="outputHash" class="result">—</div>
+
+      <label style="margin-top:10px">Verificar</label>
+      <input id="verifyHash" type="text" placeholder="Pega el hash bcrypt"/>
+      <div class="row" style="margin-top:8px">
+        <button id="btnVerify" class="btn">Verificar</button>
+      </div>
+      <div id="verifyRes" class="result" style="margin-top:8px">—</div>
+    </div>
+  </div>
+</body>
+</html>
