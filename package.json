@@ -16,6 +16,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "path": "^0.12.7",
+    "twofish": "^1.0.1",
     "unix-crypt-td-js": "^1.1.4"
   }
 }

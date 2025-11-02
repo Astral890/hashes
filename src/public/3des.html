@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>3DES - Probar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="3des.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>3DES (des-ede3-cbc)</h1>
+    <div class="card">
+      <label>Clave (hex, 24 bytes = 48 hex chars)</label>
+      <input id="key" type="text" placeholder="Clave 48 hex chars" />
+      <label>Texto</label>
+      <input id="plaintext" type="text" placeholder="Texto a cifrar" />
+      <div class="row" style="margin-top:8px">
+        <button id="btnEncrypt" class="btn">Cifrar</button>
+        <button id="btnDecrypt" class="btn ghost">Descifrar</button>
+        <a class="btn ghost" href="index.html">Volver</a>
+      </div>
+      <label>Respuesta</label>
+      <div id="output" class="result">—</div>
+    </div>
+  </div>
+</body>
+</html>
